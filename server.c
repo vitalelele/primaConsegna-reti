@@ -1,15 +1,15 @@
 /* Sviluppato con cura da Antonio Vitale [754740], Angelo Sciarra[758256], Antonio Troncellito[754736] */
 
-#if defined WIN32 // se è win32 includiamo la libreria <winsock.h>
+#if defined WIN32 // se l'OS è win32 includiamo la libreria <winsock.h>
     #include <winsock.h>
-#else // se quindi l'OS è macOS
+#else // se l'OS fa parte della famiglia UNIX
     #define closesocket close
     #include <sys/socket.h>
     #include <arpa/inet.h>
     #include <unistd.h>
-#endif // questo if defined controlla che l'OS sia win32 piuttosto che macOS 
+#endif // questo if defined controlla che l'OS sia win32 piuttosto che UNIX
 
-// librerie standard per ambo gli OS
+// librerie standard per gli OS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
